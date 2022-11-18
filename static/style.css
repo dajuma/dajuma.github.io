@@ -9,7 +9,6 @@ html {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
 }
 
 @keyframes gradient {
@@ -248,7 +247,7 @@ section {
 
 .contact-form form .button-submit {
     width: 100%;
-    margin: 0;
+    margin: 10px;
     padding: 10px;
     border-radius: 16px;
     border: none;
@@ -288,4 +287,59 @@ section {
 
 .footer .social-icon {
     width: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    margin: 16px;
+    width: 40px;
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        width: 100%;
+        background: none;
+    }
+
+    body {
+        margin: 10px;
+    }
+
+    .navigation .header-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero {
+        font-size: 24px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: right;
+    }
+
+    .hero h1 {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .projects .project-list, .skills .skill-list {
+        flex-direction: column;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .projects .project-list .project, .skills .skill-list .skill {
+        width: inherit;
+        box-sizing: border-box;
+    }
+
+    .contact .contact-form {
+        width: 100%;
+        
+    }
 }
