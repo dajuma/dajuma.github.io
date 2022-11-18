@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    margin: 0 100px;
+    background: rgb(165, 152, 135);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: gray;
+}
+
+.navigation .header-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-links li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.header-links li a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-links li a:hover {
+    font-size: 18px;
+    background: rgb(150, 147, 147);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.brand {
+    display: flex;
+}
+
+.brand p {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 12px;
+    color:rgb(108, 224, 219)
+}
+
+.hero {
+    font-size: 48px;
+    position: relative;
+    background: rgb(69, 83, 40);
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 10;
+    padding: 100px;
+    color: white
+}
+
+.hero .attention {
+    color: rgb(247, 151, 151);
+}
+
+.hero .attention:hover {
+    font-size: 78px;
+    background: rgb(240, 195, 195);
+    padding: 0px;
+    border-radius: 6px;
+}
+
+.hero .background {
+    width: 700px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+section {
+    display: flex;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects > .title, .skills > .title, .contact > .title {
+    font-size: 36px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-list .project {
+   margin: 20px; 
+   padding: 10px;
+   background: rgb(202, 184, 184);
+   border-radius: 12px;
+   box-shadow: 5px 5px 4px #a89f9f;
+   display: flex;
+   width: 30%;
+}
+
+.project-list .project .prev {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.project-list .project .desc {
+    flex-basis: 1;
+    padding-left: 10px;
+}
+
+.project-list .project:hover {
+    font-size: 18px;
+    background: rgb(150, 147, 147);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .skill {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    margin: 20px; 
+    padding: 10px;
+    background: rgb(247, 217, 217);
+    border-radius: 12px;
+    box-shadow: 5px 5px 4px #ecd3d3;
+    justify-content: center;  
+}
+
+.skills .skill .prev {
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    
+}
+
+.skill-list {
+    display: flex;
+}
+
+.skills .skill .desc {
+    flex-basis: 1;
+    padding: 10px;
+    
+}
+
+.skills .skill .prev img {
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+.skills .skill:hover {
+    font-size: 18px;
+    background: rgb(150, 147, 147);
+    box-shadow: 5px 5px 4px #ecd3d3;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .title {
+    padding: 0;
+    margin: 10px;
+}
+
+.contact-form {
+    width: 60%;
+}
+
+.contact-form form {
+    padding: 0px 20px;
+    box-sizing: border-box;
+    box-shadow: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+}
+
+.contact-form form input:focus {
+    outline: none;
+    background: rgb(230, 230, 215);
+}
+
+.contact-form form .button-submit {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    background: pink;
+}
+    
+
+.social {
+    display: flex;
+}
+
+.social .social-links {
+    display: flex;
+    margin: 20px;
+}
+
+.social .social-icon {
+    margin: 6px;
+}
+
+.social .social-icon:hover {
+    transform: scale(1.1);
+    background: gray;
+    border-radius: 12px;
+}
+
+.footer {
+    background: gray;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .social-icon {
+    width: 32px;
+}
