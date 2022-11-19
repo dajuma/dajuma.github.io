@@ -292,7 +292,7 @@ section {
 }
 
 .menu_btn{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 50px;
@@ -404,8 +404,8 @@ section {
         display: none;
     }
 
-    .mobile-menu {
-        display: block;
+    .menu_btn {
+        display: flex;
     }
 
     .hero {
