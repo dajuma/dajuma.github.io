@@ -106,7 +106,7 @@
     <section class="contact">
         <h2 class="title">Contact me!</h2>
         <div class="contact-form">
-            <form id="form" action="https://dajuma.github.io/email-submit">
+            <form id="subscribe-form">
                 <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
                 <input id="submit" type="submit" value="submit" class="btn">
               </form>
@@ -130,5 +130,50 @@
             </div>
         </div>
     </footer>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDMVTJvZREXwlKMxBOgtID1OPHjIDpN81I",
+          authDomain: "portfolio-dc7d8.firebaseapp.com",
+          projectId: "portfolio-dc7d8",
+          storageBucket: "portfolio-dc7d8.appspot.com",
+          messagingSenderId: "692924495705",
+          appId: "1:692924495705:web:5449191b9ea525e2b9be48"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = getFirestore(app);
+
+        export async function saveEmail(email){
+            console.log('saving email');
+            try {
+                const docRef = await addDoc(collection(db, "subscribers"), {
+                    email
+                });
+                console.log("Email  saved, ID: ", docRef.id);
+            } catch (e) {
+                console.error("Error adding email: ", e);
+            }
+        }
+        const submitForm = document.getElementById('subscribe-form');
+        submitForm.addEventListener("submit", function(event) {
+            const email = event.target.email.value;
+            try{
+                saveEmail(email);
+            } catch(e){
+                console.error(e);
+            }
+            event.preventDefault();
+        });
+      </script>
 </body>
 </html>
