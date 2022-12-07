@@ -222,7 +222,7 @@ section {
     width: 60%;
 }
 
-.contact-form #form {
+.contact-form form {
     padding: 0px 20px;
     box-sizing: border-box;
     box-shadow: 10px;
@@ -232,7 +232,7 @@ section {
     width: 100%;
 }
 
-.contact-form #form input {
+.contact-form form input {
     width: 100%;
     padding: 10px;
     margin: 10px;
@@ -241,12 +241,12 @@ section {
     font-size: 16px;
 }
 
-.contact-form #form input:focus {
+.contact-form form input:focus {
     outline: none;
     background: rgb(177, 175, 175);
 }
 
-.contact-form #form #submit {
+.contact-form form #submit {
     width: 100%;
     margin: 10px;
     padding: 10px;
