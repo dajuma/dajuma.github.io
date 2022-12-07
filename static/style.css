@@ -91,16 +91,17 @@ img {
     position: relative;
     z-index: 10;
     padding: 100px;
-    color: white
+    color: white; 
 }
 
 .hero .attention {
-    color: rgb(247, 151, 151);
+    color: rgb(201, 199, 199);
+    font-size: inherit;
 }
 
 .hero .attention:hover {
     font-size: 78px;
-    background: rgb(240, 195, 195);
+    background: none;
     padding: 0px;
     border-radius: 6px;
 }
@@ -134,9 +135,9 @@ section {
 .project-list .project {
    margin: 20px; 
    padding: 10px;
-   background: rgb(202, 184, 184);
+   background: rgb(214, 213, 213);
    border-radius: 12px;
-   box-shadow: 5px 5px 4px #a89f9f;
+   box-shadow: 5px 5px 4px #e4e0e0;
    display: flex;
    width: 30%;
 }
@@ -154,9 +155,10 @@ section {
 
 .project-list .project:hover {
     font-size: 18px;
-    background: rgb(150, 147, 147);
+    background: rgb(243, 237, 237);
     padding: 3px;
     border-radius: 6px;
+    background-color: #e4e0e0;
 }
 
 .skills {
@@ -171,9 +173,9 @@ section {
     align-items: center;
     margin: 20px; 
     padding: 10px;
-    background: rgb(247, 217, 217);
+    background: rgb(226, 225, 225);
     border-radius: 12px;
-    box-shadow: 5px 5px 4px #ecd3d3;
+    box-shadow: 5px 5px 4px #e9e7e7;
     justify-content: center;  
 }
 
@@ -181,6 +183,7 @@ section {
     width: 20%;
     padding: 10px;
     display: flex;
+
     
 }
 
@@ -201,11 +204,7 @@ section {
 }
 
 .skills .skill:hover {
-    font-size: 18px;
-    background: rgb(150, 147, 147);
-    box-shadow: 5px 5px 4px #ecd3d3;
-    padding: 3px;
-    border-radius: 7px;
+    background-color: rgb(235, 230, 230);
 }
 
 .contact {
@@ -223,7 +222,7 @@ section {
     width: 60%;
 }
 
-.contact-form form {
+.contact-form #form {
     padding: 0px 20px;
     box-sizing: border-box;
     box-shadow: 10px;
@@ -233,7 +232,7 @@ section {
     width: 100%;
 }
 
-.contact-form form input {
+.contact-form #form input {
     width: 100%;
     padding: 10px;
     margin: 10px;
@@ -242,12 +241,12 @@ section {
     font-size: 16px;
 }
 
-.contact-form form input:focus {
+.contact-form #form input:focus {
     outline: none;
-    background: rgb(230, 230, 215);
+    background: rgb(177, 175, 175);
 }
 
-.contact-form form .button-submit {
+.contact-form #form #submit {
     width: 100%;
     margin: 10px;
     padding: 10px;
@@ -256,7 +255,7 @@ section {
     font-family: inherit;
     font-size: 16px;
     font-weight: 600;
-    background: pink;
+    background: rgb(124, 121, 122);
 }
     
 
